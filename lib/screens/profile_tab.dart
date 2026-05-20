@@ -40,24 +40,23 @@ class ProfileTab extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            
+
             // Username display
-            Obx(() => Text(
-                  authController.username.value,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                )),
+            Obx(
+              () => Text(
+                authController.username.value,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
             const Text(
               'Pengguna NontonSkuy',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey,
-              ),
+              style: TextStyle(fontSize: 14, color: Colors.grey),
             ),
             const SizedBox(height: 32),
 
@@ -73,7 +72,10 @@ class ProfileTab extends StatelessWidget {
                 children: [
                   const Row(
                     children: [
-                      Icon(Icons.emoji_emotions_outlined, color: Colors.amberAccent),
+                      Icon(
+                        Icons.emoji_emotions_outlined,
+                        color: Colors.amberAccent,
+                      ),
                       SizedBox(width: 8),
                       Text(
                         'Kesan Praktikum',
@@ -125,7 +127,7 @@ class ProfileTab extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Terima kasih asisten praktikum atas dedikasi, bimbingan, dan kesabarannya dalam mengajar kami selama satu semester ini. Semoga ilmu yang dibagikan berkah dan bermanfaat. Tetap pertahankan keseruan dan keramahan kelas praktikumnya ya kak! Semoga sukses selalu untuk kakak semua.',
+                    'Terima kasih asisten praktikum selama satu semester ini. Semoga ilmu yang dibagikan bermanfaat.',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey[300],
@@ -138,8 +140,6 @@ class ProfileTab extends StatelessWidget {
             const SizedBox(height: 32),
 
             // Logout Button
-
-            
             SizedBox(
               height: 50,
               child: ElevatedButton(
